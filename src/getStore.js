@@ -8,6 +8,7 @@ import { createLogger } from 'redux-logger';
 import { Iterable } from 'immutable'
 import thunk from 'redux-thunk'
 import createSagaMiddleware from 'redux-saga'
+import { initSagas } from './initSagas'
 
 import { getQuery } from './utility'
 import { reducer } from './combineReducers';
@@ -35,5 +36,6 @@ export const getStore = ()=>{
         defaultState,
         enhancer
     );
+    initSagas(sagaMiddleware)
     return store;
 };
