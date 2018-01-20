@@ -1,4 +1,4 @@
-import { all, take, select, put, call, apply, fork } from 'redux-saga/effects'
+import { all, take, put, call, apply, fork } from 'redux-saga/effects'
 import {
   SET_CART_ITEMS,
   SET_CURRENT_USER,
